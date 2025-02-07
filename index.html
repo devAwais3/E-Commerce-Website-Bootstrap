@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechieShop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="d-flex flex-column">
+  <!-- Navigation Start-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">TechieShop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./product.html">Product Details</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu bg-dark text-light">
+              <li><a class="dropdown-item" href="#products">Cameras</a></li>
+              <li><a class="dropdown-item" href="#products">Apple Gadgets</a></li>
+              <li><a class="dropdown-item" href="#products">Drones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true" href="cart.html">Cart<i class="bi bi-cart-plus-fill mx-1"></i><span
+                class="cart-badge badge text-white bg-success">3</span></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0 mx-lg-2 order-sm-last">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              My Account
+            </a>
+            <ul class="dropdown-menu bg-dark text-light">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Orders</a>
+              </li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Profile</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="border-radius: 0;">
+          <button class="btn btn-success" type="submit" style="border-radius: 0;"><i class="bi bi-search"></i></button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+  <!-- Navigation End -->
+
+  <!-- Slider Start-->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="images/product-6-slider.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>XT-5</h5>
+          <p>Fly high with a 4K camera and smart controls</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="images/product-2-slider.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Apple Watch</h5>
+          <p>Smart, stylish, and fitness-ready</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="images/product-3-slider.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>iPhone X</h5>
+          <p>OLED display, Face ID, and top performance</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Slider End -->
+
+  <!-- Main Content Start-->
+  <div class="container mb-5">
+    <div class="row" id="products">
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="card product-item">
+          <img src="images/product-1-square.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Headphones</h6>
+            <h5 class="card-title">Sony WX-5</h5>
+            <p class="card-text">$99.00 <span class="float-end rating-star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-dark w-100" role="button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="card product-item">
+          <img src="images/product-2-square.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Smart Watch</h6>
+            <h5 class="card-title">Apple Watch 2</h5>
+            <p class="card-text">$499.00 <span class="float-end rating-star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-dark w-100" role="button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="card product-item">
+          <img src="images/product-3-square.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Mobile</h6>
+            <h5 class="card-title">Apple iPhone 11</h5>
+            <p class="card-text">$899.00 <span class="float-end rating-star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-dark w-100" role="button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="card product-item">
+          <img src="images/product-4-square.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Camera</h6>
+            <h5 class="card-title">Canon WM 5</h5>
+            <p class="card-text">$299.00 <span class="float-end rating-star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-dark w-100" role="button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="card product-item">
+          <img src="images/product-5-square.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Tablet</h6>
+            <h5 class="card-title">iPad Pro</h5>
+            <p class="card-text">$999.00 <span class="float-end rating-star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-dark w-100" role="button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="card product-item">
+          <img src="images/product-6-square.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Drones</h6>
+            <h5 class="card-title">XT-5</h5>
+            <p class="card-text">$1,099.00 <span class="float-end rating-star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-dark w-100" role="button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="card product-item">
+          <img src="images/product-7-1-square.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Apple Airpods</h6>
+            <h5 class="card-title">Airpods Pro 2</h5>
+            <p class="card-text">$149.00 <span class="float-end rating-star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-dark w-100" role="button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="card product-item">
+          <img src="images/product-7-2-square.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">MacBook Pro</h6>
+            <h5 class="card-title">MacBook Pro M2</h5>
+            <p class="card-text">$1,299.00 <span class="float-end rating-star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-dark w-100" role="button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Content End -->
+
+  <!-- Footer Start-->
+  <div class="footer mt-auto bg-dark text-light">
+    <div class="container py-3">
+      <div class="row d-flex footer-items">
+        <div class="col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="#">Watches</a></li>
+            <li><a href="#">Mobile Phones</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Headphones</a></li>
+            <li><a href="#">Drones</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Mission</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h5>Get Updates</h5>
+          <div class="d-flex subscribe">
+            <input type="text" class="form-control">
+            <button class="btn btn-warning d-flex">Subscribe<i class="bi bi-arrow-right-short"></i></button>
+          </div>
+          <div class="mt-2 social-icons">
+            <i class="bi bi-facebook mx-1"></i>
+            <i class="bi bi-whatsapp mx-1"></i>
+            <i class="bi bi-instagram mx-1"></i>
+            <i class="bi bi-tiktok mx-1"></i>
+            <i class="bi bi-youtube mx-1"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Footer End -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Login/SignUp Required!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Please Login To Check Your Account. <br>
+          Don't have an account? Please Sign Up
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+          <a type="button" href="login.html" class="btn btn-outline-success">Go to Login</a>
+          <a type="button" href="signup.html" class="btn btn-outline-success">Go to Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

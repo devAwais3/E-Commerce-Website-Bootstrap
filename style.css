@@ -1,0 +1,110 @@
+@font-face {
+    font-family: inter;
+    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
+    src: url(fonts/static/Inter_24pt-Light.ttf);
+}
+body{
+    min-height: 100vh;
+    font-family: inter;
+}
+
+.rating-star{ 
+    color: rgb(255, 213, 0);
+}
+.product-item{
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+.footer-items h5{
+    color: white;
+    font-size: 1.2rem;
+
+}
+.footer-items ul{
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+}
+.footer-items ul a{
+    text-decoration: none;
+    color: #ccc;
+}
+.footer-items ul a:hover{
+    text-decoration: underline;
+}
+
+.product-small img{
+    width: 10rem; 
+    padding: 0.5rem;
+}
+.cart-item{
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+}
+.order-total{
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+}
+.close-icon i{
+    font-size: 1.5rem;
+}
+.close-icon i:hover{
+    color: red;
+}
+.login-form{
+    background-color: #eee;
+    border-radius: 12px;
+    padding: 2rem;
+}
+.orderSuccess-icon{
+    font-size: 5rem;
+}
+.orderFail-icon{
+    font-size: 5rem;
+}
+#carouselExampleDark img{
+    max-height: 90vh;
+}
+.product-color{
+    border-radius: 50% !important;
+    margin: 5px;
+}
+.accordion-body{
+    font-size: 0.8rem;
+    color: grey;
+}
+.accordion-button{
+    padding: 5px;
+}
+.accordion-button:not(.collapsed){
+    background-color: black;
+    color: white;
+}
+.cart-badge{
+    position: relative;
+    top: -15px;
+    left: -10px;
+}
+a.dropdown-item{
+    color: white;
+}
+.carousel-caption{
+    background-color: #ffffff66;
+}
+.nav-item a{
+    color: white;
+}
+.subscribe input, .subscribe button{
+    border-radius: 0;
+}
+.social-icons i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(166, 165, 165);
+    transition: color 0.3s ease;
+}
+.social-icons i:hover{
+    color: rgb(255, 204, 0);
+}
+
